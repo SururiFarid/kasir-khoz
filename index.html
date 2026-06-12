@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kasir Khoz</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>TOKO KHOZ</h1>
+        <h2>Jl. Jatiwayang, Ngunut, Ngunut, Tulungagung</h2>
+        <div id="datetime"></div>
+    </div>
+
+    <div class="card">
+        <h2>Input Barang</h2>
+
+        <div class="form-grid">
+            <select id="namaKasir">
+                <option value="Admin">Admin</option>
+            </select>
+
+            <input type="text" id="namaBarang" placeholder="Nama Barang">
+            <input type="number" id="hargaBarang" placeholder="Harga">
+            <input type="number" id="qtyBarang" placeholder="Qty">
+            <button class="btn-add" onclick="tambahBarang()">Tambah</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Keranjang</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>Qty</th>
+                    <th>Harga</th>
+                    <th>Total</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="cartBody"></tbody>
+        </table>
+
+        <div class="summary">
+
+            <h3>Total: Rp <span id="totalBelanja">0</span></h3>
+
+            <input type="number" id="uangDibayar" placeholder="Uang Dibayar" oninput="hitungKembalian()">
+
+            <input type="text" id="uangKembalian" placeholder="Kembalian" readonly>
+
+            <button class="btn-print" onclick="selesaiDanCetak()">
+                Selesai & Cetak Struk
+            </button>
+
+        </div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
