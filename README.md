@@ -1,0 +1,2 @@
+# kasir-khoz
+kasir
